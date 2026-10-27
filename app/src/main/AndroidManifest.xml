@@ -3,7 +3,8 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="androidx.car.app.NAVIGATION_TEMPLATES"/>
     <uses-permission android:name="androidx.car.app.ACCESS_SURFACE"/>
-    <application android:label="Car Browser" android:usesCleartextTraffic="true"
+    <application android:label="Car Browser" android:icon="@drawable/ic_launcher"
+        android:usesCleartextTraffic="true"
         android:theme="@android:style/Theme.Material.Light.NoActionBar">
         <meta-data android:name="com.google.android.gms.car.application" android:resource="@xml/automotive_app_desc"/>
         <meta-data android:name="androidx.car.app.minCarApiLevel" android:value="1"/>
@@ -13,7 +14,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <service android:name=".BrowserCarService" android:exported="true">
+        <service android:name=".BrowserCarService" android:exported="true"
+            android:label="Car Browser" android:icon="@drawable/ic_launcher">
             <intent-filter>
                 <action android:name="androidx.car.app.CarAppService"/>
                 <category android:name="androidx.car.app.category.NAVIGATION"/>
